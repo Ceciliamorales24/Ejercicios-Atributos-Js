@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Ejericio</title>
+    <style>
+        .tachado{
+            text-decoration: line-through;
+        }
+    
+    </style>
+</head>
+
+
+<body>
+
+    <!--  // 001
+    /**
+    * Crear un TODO list, que tenga
+    * 1. un input para agregar nuevos TODO(COSAS POR HACER)
+    * 2. Este input debe tener un button para poder
+    * agregar el TODO desde el input
+    * 3. un button por cada TODO de la lista
+    * para borrar el mismo.
+    * 4. Un checkbox, antes del texto de cada TODO,
+    * que me permita tachar el elemento de la lista
+    * como resuelto. -->
+
+    <!-- DUDA: Cual es la diferencia entre name y value, y id y cuando usar cada uno para que ?-->
+    <!-- <input type="button" name="Lista de Productos" id="todoList"> -->
+    <!-- Name es para mandar el nombre -->
+    <!-- template -->
+    <input type="text" id="todoName" />
+    <button id="todoAdd" onclick="addToList()">Agregar</button>
+    <ul id="todoList"></ul>
+
+</body>
+
+<script src="ejercicio.js"></script>
+
+</html>
