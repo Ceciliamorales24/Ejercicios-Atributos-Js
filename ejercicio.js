@@ -16,7 +16,7 @@
     5. Creo el elemento "li". y después creo una nueva variable const = text
     donde voy a crear un text Node y le paso por paramento el (textValue, que es 
     la const que creee al pricipio). Hago esto porque sino no puedo llamar al appendChild.
-    6. 
+    6. Es necesario crear eventos para cada acción de lo que quiero hacer.
 */
 const list = [];
 const crearBoton2 = () => {
@@ -87,8 +87,6 @@ const addToList = () => {
         alert("Debes ingresar un valor para un nuevo todo")
     }
 }*/
-
-
 
 
 // errror cuando el usuario no completo el input
