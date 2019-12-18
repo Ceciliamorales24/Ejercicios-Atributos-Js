@@ -38,6 +38,18 @@ const crearBoton2 = () => {
     });
     return button2;
 };
+
+const crearBotonBorrar = () => {
+    let button = document.createElement("button");
+    button.innerHTML = "borrar";
+    button.addEventListener("click", (event) => {
+        const button = event.target;
+        const li = button.parentElement;
+        li.remove();
+    })
+    return button;
+};
+
 const addToList = () => {
     const textValue = document.querySelector("#todoName").value;
     let contenedor = document.createElement("span")
@@ -51,18 +63,14 @@ const addToList = () => {
     //destructuring. evito tener que poner id.tal cosa y value.tal cosa
     const li = document.createElement("li");
     //al li le paso un nodo de texto porque sino no puedo acceder al appendChild.
-    const button = document.createElement("button");
-    button.innerHTML = "borrar";
-    button.addEventListener("click", (event) => {
-        const button = event.target;
-        const li = button.parentElement;
-        li.remove();
-    });
+    let nuevoBoton1 = crearBotonBorrar();
+    li.appendChild(nuevoBoton1);
     li.appendChild(nuevoBoton2); //pusheea al button 2 dentro de li.
     li.appendChild(contenedor); //pushea el contenedor span con la tarea/texto.
-    li.appendChild(button); //pusheea el boton de eliminar. 
+    // li.appendChild(button); //pusheea el boton de eliminar en el caso de que esto no este fuera de una funcion aparte
     ul.appendChild(li);
     document.querySelector("#todoName").value = "";
+    // esto hace que el texto del input desaparezca.
 
     // ul.appendChild(`<li>${element.value}</li>`) 
     //template literals. concatenar string con variables.    
