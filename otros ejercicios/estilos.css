@@ -1,0 +1,15 @@
+.cajita {
+     width: 450px;
+     height: 300px;
+     background-color: springgreen;
+}
+
+p {
+    color: black;
+    font-size: 36px;
+    text-align: center;
+}
+
+.active {
+    background-color: red;
+}

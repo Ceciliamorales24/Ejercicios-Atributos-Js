@@ -78,7 +78,7 @@ const addToList = () => {
     //template literals. concatenar string con variables.    
 };
 
-// UNA FORMA LLAMANDO AL EVENTO DESDE EL INPUT html
+// UNA FORMA LLAMANDO AL EVENTO
 // Cambiar el color del input
 
 /*
@@ -89,7 +89,7 @@ onblur y onfocus desde el html. Hice la prueba de esto pero no se usa mucho
 Por lo tanto puedo crear un nuevo input donde llamo al evento (creando un nuevo let)
 y le digo addEventListener ("aca le paso la accion que tiene que hacer", acá llamo a la funcion)
 */
-const changeColor = () => {
+/*const changeColor = () => {
     const bordeColor = document.querySelector("#todoName")
     bordeColor.style.borderWidth = "100px"; //con esto le puedo dar borde
     bordeColor.style.borderColor = "red";
@@ -103,10 +103,10 @@ const changeColor2 = () => {
 
 const miElemento = document.querySelector("#todoName");
 miElemento.addEventListener("focus", changeColor); //da el color
-miElemento.addEventListener("blur", changeColor2); //saca el borde de color
+miElemento.addEventListener("blur", changeColor2); //saca el borde de color*/
 
 
-// OTRA FORMA DE CAMBIAR EL COLOR DEL INPUT
+// OTRA FORMA DE CAMBIAR EL COLOR DEL INPUT (Giuli)
 // 
 
 

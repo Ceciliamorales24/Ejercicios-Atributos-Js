@@ -1,0 +1,142 @@
+<!--
+ 001
+  Escribir una funcion que nos permita pasarle un elemento 
+  y un color, y  le cambie el color de fondo al elemento.
+
+002 
+   Modificar la funcion previa para que, si no se recibe
+   un color por parametro, se busque un color de forma
+   azarosamente.
+
+003
+   Crear una lista con varios elementos.
+   Crear una funcion que asigne la clase
+   "active" a uno de estos elementos seleccionados.
+   Además, al mismo tiempo tiene que eliminar
+   la clase "active" del resto de los elementos.
+   Asignarle algun estilo para diferenciar la clase
+   "active" de cuando no se encuentra la misma.
+
+004
+
+   Crear una funcion para aumentar tamaño 
+   de un titulo y otra para reducirlo.
+
+   
+005
+
+   Crear una lista que contenga imágenes, de las 
+   cuales se va a mostrar solo una.
+   Crear una funcion que me permita ir cambiando
+   de imagen cada vez que la ejecuto, segun el orden
+   en que estan declaradas.
+  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <h1 class="titulo">Titulo</h1>
+    <div class="cajita">
+        <p>no me acuerdo de nada</p>
+    </div>
+
+    <ul id="list">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <ul id="galeria">
+        <li><img src="the night of the hunter.jpg"></li>
+        <li><img src="the witness.jpg"></li>
+        <li><img src="The-Exorcist-2.jpg"></li>
+        <li><img src="the_graduate_ending_shot_elaine_and_benjamin_on_bus-e1386510857956.png"></li>
+    </ul>
+
+    <script>
+        //01
+        const colorCajita = (elemento, color = undefined) => {
+
+            elemento.style.background = color;
+            if (color == undefined) {
+                return colorRandom;
+            }
+        }
+
+        //02
+        const colorRandom = () => {
+            let letras = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letras[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        //03
+        const activate = (index) => {
+            let lista = document.querySelectorAll("#list > li");
+            for (item of lista) {
+                item.classList.remove("active");
+            }
+            lista[index].classList.add("active");
+        }
+
+        //04
+        const cambiar = (tamaño) => {
+            let titulo = document.querySelector(".titulo");
+            titulo.style.fontSize= tamaño+"px";
+        }
+/*
+
+    const increaseTitle = (titulo) => { 
+        let title = document.querySelector(titulo);
+        let fontSize = getComputedStyle(title).getPropertyValue("font-size");
+        fontSize= parseFloat(fontSize);
+        title.style.fontSize = fontSize + 10 + "px";
+    }
+
+
+    const decreaseTitle = (titulo) => { 
+        let title = document.querySelector(titulo);
+        let fontSize = getComputedStyle(title).getPropertyValue("font-size");
+        fontSize= parseFloat(fontSize);
+        title.style.fontSize = fontSize - 10 + "px";
+    }
+
+*/
+
+        //05
+        const imagenes = (index) => {
+            let imgs = document.querySelectorAll("#galeria > li");
+
+            
+            
+        }
+
+    </script>
+
+
+    <!--const suma = () => {
+    for (let i = 0; i < 10; i++) {
+        setTimeout(() => {console.log(i+1)},i * 1000)}
+    }
+   
+-->
+
+
+</body>
+
+</html>
