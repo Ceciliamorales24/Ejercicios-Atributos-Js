@@ -91,8 +91,8 @@ y le digo addEventListener ("aca le paso la accion que tiene que hacer", acá ll
 */
 const changeColor = () => {
     const bordeColor = document.querySelector("#todoName")
+    bordeColor.style.borderWidth = "100px"; //con esto le puedo dar borde
     bordeColor.style.borderColor = "red";
-    bordeColor.style.borderwidth = 10; 
 }
 
 // Sacarle el borde al  input
