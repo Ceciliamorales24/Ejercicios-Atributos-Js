@@ -10,6 +10,11 @@
         .tachado {
             text-decoration: line-through;
         }
+
+        #todoName {
+            border: red;
+        }
+        
     </style>
 </head>
 
@@ -31,7 +36,8 @@
     <!-- <input type="button" name="Lista de Productos" id="todoList"> -->
     <!-- Name es para mandar el nombre -->
     <!-- template -->
-    <input type="text" id="todoName" onfocus="changeColor()" onblur="changeColor2()"/>
+    <!-- <input type="text" id="todoName" onfocus="changeColor()" onblur="changeColor2()" />  -->
+    <input type="text" id="todoName"/> 
     <button id="todoAdd" onclick="addToList()">Agregar</button>
     <ul id="todoList"></ul>
 

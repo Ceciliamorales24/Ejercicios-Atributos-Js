@@ -76,11 +76,9 @@ const addToList = () => {
 
     // ul.appendChild(`<li>${element.value}</li>`) 
     //template literals. concatenar string con variables.    
-
-    //ul que tenga un li, checkbok, remove. Ul le tengo que mandar li que contenga checkbox y removebotton y texto.
-    // });
 };
 
+// UNA FORMA LLAMANDO AL EVENTO DESDE EL INPUT
 // Cambiar el color del input
 
 /*
@@ -93,17 +91,36 @@ onblur y onfocus desde el html
 /*miElemento.addEventListener("blue", changeColor)
 miElemento.addEventListener("blue", changeColor)*/
 
-const changeColor = () => {
+/*const changeColor = () => {
     const bordeColor = document.querySelector("#todoName")
     bordeColor.style.borderColor = "blue"
 }
 
-// Sacarle el borde al input
-
+// Sacarle el borde al  input
 const changeColor2 = () => {
     const bordeColorBlur = document.querySelector("#todoName")
     bordeColorBlur.style.borderColor = "";
-}
+}*/
+
+// OTRA FORMA DE CAMBIAR EL COLOR DEL INPUT
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**
