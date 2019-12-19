@@ -7,10 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DOM Ejericio</title>
     <style>
-        .tachado{
+        .tachado {
             text-decoration: line-through;
         }
-    
     </style>
 </head>
 
@@ -32,7 +31,7 @@
     <!-- <input type="button" name="Lista de Productos" id="todoList"> -->
     <!-- Name es para mandar el nombre -->
     <!-- template -->
-    <input type="text" id="todoName" />
+    <input type="text" id="todoName" onfocus="changeColor()" onblur="changeColor2()"/>
     <button id="todoAdd" onclick="addToList()">Agregar</button>
     <ul id="todoList"></ul>
 

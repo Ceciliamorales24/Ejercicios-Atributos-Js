@@ -18,7 +18,20 @@
     la const que creee al pricipio). Hago esto porque sino no puedo llamar al appendChild.
     6. Es necesario crear eventos para cada acción de lo que quiero hacer.
 */
+
 const list = [];
+
+const crearBotonBorrar = () => {
+    let button = document.createElement("button");
+    button.innerHTML = "borrar";
+    button.addEventListener("click", (event) => {
+        const button = event.target;
+        const li = button.parentElement;
+        li.remove();
+    })
+    return button;
+};
+
 const crearBoton2 = () => {
     let button2 = document.createElement("input");
     // creo un buton input sin caracteristicas
@@ -37,17 +50,6 @@ const crearBoton2 = () => {
         }
     });
     return button2;
-};
-
-const crearBotonBorrar = () => {
-    let button = document.createElement("button");
-    button.innerHTML = "borrar";
-    button.addEventListener("click", (event) => {
-        const button = event.target;
-        const li = button.parentElement;
-        li.remove();
-    })
-    return button;
 };
 
 const addToList = () => {
@@ -78,6 +80,30 @@ const addToList = () => {
     //ul que tenga un li, checkbok, remove. Ul le tengo que mandar li que contenga checkbox y removebotton y texto.
     // });
 };
+
+// Cambiar el color del input
+
+/*
+La funcion changeColor y changeColor2 es
+una forma de cambiar el
+borde del color usando el evento
+onblur y onfocus desde el html
+*/
+
+/*miElemento.addEventListener("blue", changeColor)
+miElemento.addEventListener("blue", changeColor)*/
+
+const changeColor = () => {
+    const bordeColor = document.querySelector("#todoName")
+    bordeColor.style.borderColor = "blue"
+}
+
+// Sacarle el borde al input
+
+const changeColor2 = () => {
+    const bordeColorBlur = document.querySelector("#todoName")
+    bordeColorBlur.style.borderColor = "";
+}
 
 
 /**
